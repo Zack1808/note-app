@@ -13,7 +13,10 @@ const AddNote = ({ handleAddNote }) => {
     }
 
     const handleSave = () => {
-        handleAddNote(noteText);
+        if(noteText.trim().length > 0) {
+            handleAddNote(noteText);
+            setNoteText("")
+        }
     }
 
     return (
