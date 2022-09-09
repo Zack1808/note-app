@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Importing the style file
+import '../css/NotesList.css'
+
 // Importing the costume made components
 import Note from './Note';
 
