@@ -11,3 +11,12 @@
 .dark-mode h1 {
     color: #fff;
 }
+
+.dark-mode .save {
+    background-color: rgb(120, 120, 120);
+    color: #fff;
+}
+
+.dark-mode .save:hover {
+    background-color: rgb(135, 135, 135);
+}

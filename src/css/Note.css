@@ -18,3 +18,8 @@
 .delete-icon {
     cursor: pointer;
 }
+
+.dark-mode .note  {
+    background-color: hsl(55, 31%, 40%);
+    color: #fff;
+}

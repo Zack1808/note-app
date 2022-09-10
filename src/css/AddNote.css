@@ -17,9 +17,19 @@ textarea:focus {
     border: none;
     border-radius: 15px;
     padding: 5px 10px;
+    font-weight: bold;
 }
 
 .save:hover {
     background-color: #ededed;
     cursor: pointer;
+}
+
+.dark-mode .note.new {
+    background-color: #48968e;
+}
+
+.dark-mode textarea {
+    background-color: #48968e;
+    color: #fff;
 }

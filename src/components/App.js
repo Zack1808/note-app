@@ -13,7 +13,8 @@ import Header from './Header';
 const App = () =>{
 
     const [notes, setNotes] = useState([]);
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState("");
+    const [darkMode, setDarkMode] = useState(false);
 
     const addNote = (text) => {
         const date = new Date();
@@ -32,10 +33,12 @@ const App = () =>{
     }
 
     return(
-        <div className="container">
-            <Header />
-            <Search search={search} setSearch={setSearch} />
-            <NotesList notes={notes.filter(note => note.text.toLowerCase().includes(search.toLowerCase()))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
+        <div className={`${darkMode && "dark-mode"}`}>
+            <div className="container">
+                <Header handleToggleDarkMode={setDarkMode} />
+                <Search search={search} setSearch={setSearch} />
+                <NotesList notes={notes.filter(note => note.text.toLowerCase().includes(search.toLowerCase()))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
+            </div>
         </div>
     )
 }
