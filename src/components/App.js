@@ -6,6 +6,7 @@ import '../css/App.css';
 
 // Improting the costume made components
 import NotesList from './NotesList';
+import Search from './Search';
 
 // Creating the App component
 const App = () =>{
@@ -51,6 +52,7 @@ const App = () =>{
 
     return(
         <div className="container">
+            <Search />
             <NotesList notes={notes} handleAddNote={addNote} handleDeleteNote={deleteNote} />
         </div>
     )
