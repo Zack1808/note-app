@@ -18,15 +18,15 @@ const App = () =>{
 
     useEffect(() => {
         const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
-        const darkModeStatus = localStorage.getItem('react-notes-app-dark');
+        const darkModeStatus = JSON.parse(localStorage.getItem('react-notes-app-dark'));
         if(savedNotes) setNotes(savedNotes)
-        if(darkModeStatus) setDarkMode(darkModeStatus)
+        setDarkMode(darkModeStatus)
     }, [])
 
     useEffect(() => {
         localStorage.setItem('react-notes-app-data', JSON.stringify(notes));
-        localStorage.setItem('react-notes-app-dark', darkMode);
-    }, [notes]);
+        localStorage.setItem('react-notes-app-dark', JSON.stringify(darkMode));
+    }, [notes, darkMode]);
 
     const addNote = (text) => {
         const date = new Date();
