@@ -11,28 +11,8 @@ import Search from './Search';
 // Creating the App component
 const App = () =>{
 
-    const [notes, setNotes] = useState([
-        {
-            id: nanoId(),
-            text: "This is my first note!",
-            date: "13/05/2022",
-        },
-        {
-            id: nanoId(),
-            text: "This is my second note!",
-            date: "14/05/2022",
-        }, 
-        {
-            id: nanoId(),
-            text: "This is my third note!",
-            date: "15/05/2022",
-        },
-        {
-            id: nanoId(),
-            text: "This is my fourth note!",
-            date: "16/05/2022",
-        },
-    ]);
+    const [notes, setNotes] = useState([]);
+    const [search, setSearch] = useState("")
 
     const addNote = (text) => {
         const date = new Date();
@@ -52,8 +32,8 @@ const App = () =>{
 
     return(
         <div className="container">
-            <Search />
-            <NotesList notes={notes} handleAddNote={addNote} handleDeleteNote={deleteNote} />
+            <Search search={search} setSearch={setSearch} />
+            <NotesList notes={notes.filter(note => note.text.toLowerCase().includes(search.toLowerCase()))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
         </div>
     )
 }

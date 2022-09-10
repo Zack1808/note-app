@@ -5,11 +5,11 @@ import {MdSearch} from 'react-icons/md'
 import '../css/Search.css';
 
 // Creating the Search comopnent
-const Search = () => {
+const Search = ({ search, setSearch }) => {
     return(
         <div className="search">
             <MdSearch className="search-icons" size="1.3em" />
-            <input type="text" placeholder='Type to search' />
+            <input value={search} onChange={e => setSearch(e.target.value)} type="text" placeholder='Type to search' />
         </div>
     )
 }
