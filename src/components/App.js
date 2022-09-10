@@ -7,6 +7,7 @@ import '../css/App.css';
 // Improting the costume made components
 import NotesList from './NotesList';
 import Search from './Search';
+import Header from './Header';
 
 // Creating the App component
 const App = () =>{
@@ -32,6 +33,7 @@ const App = () =>{
 
     return(
         <div className="container">
+            <Header />
             <Search search={search} setSearch={setSearch} />
             <NotesList notes={notes.filter(note => note.text.toLowerCase().includes(search.toLowerCase()))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
         </div>
