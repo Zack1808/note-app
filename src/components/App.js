@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { nanoid as nanoId } from 'nanoid'
 
 // Importing the style file
@@ -15,6 +15,18 @@ const App = () =>{
     const [notes, setNotes] = useState([]);
     const [search, setSearch] = useState("");
     const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
+        const darkModeStatus = localStorage.getItem('react-notes-app-dark');
+        if(savedNotes) setNotes(savedNotes)
+        if(darkModeStatus) setDarkMode(darkModeStatus)
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('react-notes-app-data', JSON.stringify(notes));
+        localStorage.setItem('react-notes-app-dark', darkMode);
+    }, [notes]);
 
     const addNote = (text) => {
         const date = new Date();
