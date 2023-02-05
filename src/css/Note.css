@@ -1,25 +1,27 @@
 .note {
-    background-color: #fef68a;
-    border-radius: 10px;
-    padding: 1rem;
-    min-height: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    white-space: pre-wrap;
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  transition: 0.5s ease-in-out;
 }
 
 .note-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .delete-icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.dark-mode .note  {
-    background-color: hsl(55, 31%, 40%);
-    color: #fff;
+.dark-mode .note {
+  background-color: hsl(51, 3%, 43%);
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }

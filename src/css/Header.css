@@ -1,22 +1,31 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .dark-mode {
-    background-color: rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
+  transition: 0.5s ease-in-out;
+}
+
+h1 {
+  color: #000;
+  transition: 0.5s ease-in-out;
 }
 
 .dark-mode h1 {
-    color: #fff;
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }
 
 .dark-mode .save {
-    background-color: rgb(120, 120, 120);
-    color: #fff;
+  background-color: rgb(120, 120, 120);
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }
 
 .dark-mode .save:hover {
-    background-color: rgb(135, 135, 135);
+  background-color: rgb(135, 135, 135);
+  transition: 0.5s ease-in-out;
 }

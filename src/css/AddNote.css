@@ -1,35 +1,40 @@
 .note.new {
-    background-color: #67d7cc;
+  background-color: #67d7cc;
+  transition: 0.5s ease-in-out;
 }
 
 textarea {
-    border: none;
-    resize: none;
-    background-color: #67d7cc;
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+  transition: 0.5s ease-in-out;
 }
 
 textarea:focus {
-    outline: none;
+  outline: none;
 }
 
 .save {
-    background-color: #e1e1e1;
-    border: none;
-    border-radius: 15px;
-    padding: 5px 10px;
-    font-weight: bold;
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
 }
 
 .save:hover {
-    background-color: #ededed;
-    cursor: pointer;
+  background-color: #ededed;
+  cursor: pointer;
 }
 
 .dark-mode .note.new {
-    background-color: #48968e;
+  background-color: #565656;
+  transition: 0.5s ease-in-out;
 }
 
 .dark-mode textarea {
-    background-color: #48968e;
-    color: #fff;
+  background-color: #565656;
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }
