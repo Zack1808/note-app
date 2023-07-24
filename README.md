@@ -55,3 +55,7 @@ If you have any questions or suggestions, you can reach me via:
 
 - Mail: jeanpierrenovak23@gmail.com
 - My portfolio: [jeanpierrenovak.netlify.app](https://jeanpierrenovak.netlify.app)
+
+---
+
+Happy note-taking!
